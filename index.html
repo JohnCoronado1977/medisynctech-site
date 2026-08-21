@@ -1,97 +1,51 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>MediSync Technologies</title>
-  <meta name="description" content="MediSync Technologies — technology designed around real life.">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#02040a">
+<title>MediSync Technologies</title>
+<meta name="description" content="MediSync Technologies creates innovative mobile applications designed to simplify, organize, and elevate everyday life.">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<canvas id="mst-particle-canvas" aria-hidden="true"></canvas>
 
-  <canvas id="mst-particle-canvas" aria-hidden="true"></canvas>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="mst">MST</span><span><b>Medi<span>Sync</span></b><small>TECHNOLOGIES</small></span></a>
+  <nav><a class="active" href="#home">Home</a><a href="#apps">Apps</a><a href="#about">About Us</a><a href="#contact">Contact</a></nav>
+  <a class="outline" href="#contact">Get in Touch&nbsp;&nbsp;→</a>
+</header>
 
-  <div id="mst-site">
-    <section class="mst-section mst-home" id="home">
-      <header class="mst-navigation">
-        <div class="mst-brand">
-          <div class="mst-logo-text">MST</div>
-          <div class="mst-logo-sub">MEDISYNC TECHNOLOGIES</div>
-        </div>
-
-        <nav class="mst-links" aria-label="Primary">
-          <a href="#home">Home</a>
-          <a href="#apps">Apps</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
-
-      <div class="mst-hero-content">
-        <h1>MediSync<br>Technologies</h1>
-        <p>Technology designed around real life.</p>
-        <a href="#apps" class="mst-primary-button">Explore Our Apps</a>
-      </div>
-    </section>
-
-    <section class="mst-section mst-apps" id="apps">
-      <div class="mst-container">
-        <div class="mst-eyebrow">OUR SOFTWARE</div>
-        <h2>Apps built for real life.</h2>
-        <p class="mst-intro">
-          Thoughtfully designed technology that makes everyday information easier to manage.
-        </p>
-
-        <div class="mst-app-card">
-          <div class="mst-app-icon-placeholder">APP ICON</div>
-
-          <div class="mst-app-copy">
-            <div class="mst-app-status">AVAILABLE SOON</div>
-            <h3>MedTrak</h3>
-            <p>
-              Medication management designed to help organize prescriptions, schedules,
-              appointments and other important medication information in one place.
-            </p>
-            <a href="#" class="mst-primary-button">View MedTrak</a>
-          </div>
-        </div>
-
-        <div class="mst-screen-grid">
-          <div>SCREENSHOT</div>
-          <div>SCREENSHOT</div>
-          <div>SCREENSHOT</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mst-section mst-about" id="about">
-      <div class="mst-container">
-        <div class="mst-eyebrow">ABOUT MEDISYNC</div>
-        <h2>Technology with a purpose.</h2>
-        <p class="mst-intro">
-          MediSync Technologies develops thoughtfully designed software focused on making
-          complicated everyday information easier to understand, organize and use.
-        </p>
-      </div>
-    </section>
-
-    <section class="mst-section mst-contact" id="contact">
-      <div class="mst-container">
-        <div class="mst-eyebrow">CONTACT</div>
-        <h2>Let’s build something useful.</h2>
-        <p class="mst-intro">
-          Questions about MediSync Technologies or one of our apps?
-        </p>
-        <a href="mailto:hello@medisynctech.com" class="mst-primary-button">Contact Us</a>
-      </div>
-    </section>
-
-    <footer class="mst-footer">
-      <span>© MediSync Technologies</span>
-      <span>Designed around real life.</span>
-    </footer>
+<main>
+<section id="home" class="hero">
+  <div class="hero-inner reveal">
+    <div class="badge">INNOVATE. BUILD. EMPOWER.</div>
+    <h1>Building Smarter<br><span>Digital Experiences</span></h1>
+    <p>MediSync Technologies creates innovative mobile<br class="desktop"> applications designed to simplify, organize, and elevate<br class="desktop"> everyday life.</p>
+    <a class="primary" href="#apps">♢ &nbsp; Explore Our Apps</a>
   </div>
+</section>
 
-  <script src="script.js"></script>
-</body>
-</html>
+<section id="apps" class="apps-shell">
+  <div class="section-title reveal"><span>OUR APPS</span><h2>Solutions That Make a Difference</h2><p>Powerful, intuitive, and built with purpose.</p></div>
+  <article class="app-card reveal">
+    <div class="app-copy">
+      <div class="med-icon"><div class="capsule"></div><i></i><i></i><i></i></div>
+      <div><h3>MedTrak</h3><h4>Medication Tracker</h4>
+      <p>Stay on track with your health. MedTrak helps you manage medications, set reminders, track adherence, and share reports with your healthcare providers.</p>
+      <a class="outline" href="#contact">Learn More&nbsp;&nbsp;→</a></div>
+    </div>
+    <div class="phones">
+      <div class="phone"><div class="notch"></div><div class="screen"><b class="pt">Today</b><div class="ring"><strong>85%</strong><small>Daily Progress</small></div><h5>Today's Medications</h5><div class="row"><b>Lisinopril 10mg</b><em>Taken</em><small>8:00 AM</small></div><div class="row"><b>Metformin 500mg</b><em>Taken</em><small>12:00 PM</small></div><div class="row"><b>Atorvastatin 20mg</b><em class="purple">Upcoming</em><small>8:00 PM</small></div></div></div>
+      <div class="phone"><div class="notch"></div><div class="screen"><b class="pt">Timeline</b><div class="timeline"><b>Lisinopril 10mg</b><em>Taken</em><small>8:00 AM</small></div><div class="timeline"><b>Metformin 500mg</b><em>Taken</em><small>12:00 PM</small></div><div class="timeline purpleline"><b>Atorvastatin 20mg</b><em class="purple">Upcoming</em><small>8:00 PM</small></div></div></div>
+      <div class="phone"><div class="notch"></div><div class="screen"><b class="pt">Reports</b><h5>Adherence Report</h5><div class="score"><strong>85%</strong><small>Overall Adherence</small></div><h5>Medication Summary</h5><div class="summary">Lisinopril 10mg <b>90%</b><i style="width:90%"></i></div><div class="summary">Metformin 500mg <b>80%</b><i style="width:80%"></i></div><div class="summary">Atorvastatin 20mg <b>80%</b><i style="width:80%"></i></div></div></div>
+    </div>
+  </article>
+</section>
+
+<section id="about" class="lower reveal"><span>ABOUT US</span><h2>Technology designed around real life.</h2><p>We create focused, thoughtfully designed digital experiences that make everyday tasks clearer, easier, and more useful.</p></section>
+<section id="contact" class="lower contact reveal"><span>CONTACT</span><h2>Let's build something useful.</h2><a class="primary" href="mailto:hello@medisynctech.com">Get in Touch →</a></section>
+</main>
+<footer>© <span id="year"></span> MediSync Technologies. All rights reserved.</footer>
+<script src="script.js"></script>
+</body></html>

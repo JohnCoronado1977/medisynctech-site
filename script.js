@@ -225,3 +225,10 @@
   buildScene();
   animate();
 })();
+
+document.getElementById('year').textContent=new Date().getFullYear();
+const revealObserver=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>revealObserver.observe(e));
+const navLinks=[...document.querySelectorAll('.topbar nav a')];
+const sectionObserver=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-35% 0px -55%'});
+document.querySelectorAll('main section[id]').forEach(s=>sectionObserver.observe(s));

@@ -1,23 +1,5 @@
-# MediSync Technologies — GitHub Pages Site
+MediSync Technologies — approved neon landing page build.
 
-This folder is ready for GitHub Pages.
-
-Files:
-- index.html
-- styles.css
-- script.js
-
-## Quick GitHub Pages setup
-1. Create a new GitHub repository.
-2. Upload all three files to the repository root.
-3. Open the repository Settings.
-4. Open Pages.
-5. Under "Build and deployment", choose "Deploy from a branch".
-6. Choose the `main` branch and `/ (root)`.
-7. Save.
-
-GitHub will provide a github.io URL after deployment.
-
-## Customize later
-Replace the APP ICON and SCREENSHOT placeholders in index.html with your real MedTrak assets.
-The animation is a fixed live canvas background and reacts subtly to page scrolling.
+Upload index.html, styles.css, script.js to the ROOT of your GitHub Pages repository.
+This build intentionally keeps the site self-contained: the logo, MedTrak icon, and phone previews are rendered with HTML/CSS, so there are no missing image dependencies.
+The existing animated particle behavior is preserved and the hero-to-apps transition is continuous to avoid the banding issue.
