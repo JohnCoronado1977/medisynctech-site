@@ -23,3 +23,11 @@ PRODUCTION PERFORMANCE PASS
 - Large offscreen sections use content-visibility to reduce painting.
 - Heavy scrolling shadows removed.
 - prefers-reduced-motion is respected.
+
+
+MOBILE SCROLL FIX
+- Locks the page to vertical touch scrolling.
+- Prevents horizontal overscroll/rubber-banding.
+- Removes the horizontally scrolling phone-preview rail on mobile.
+- Stacks MedTrak phone previews vertically so swiping up/down always scrolls the page.
+- Constrains all major sections to the viewport width.
