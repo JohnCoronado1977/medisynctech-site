@@ -39,3 +39,93 @@
 .feature-card>b{font-size:10px;color:#2b8cff;letter-spacing:2px}.feature-card h4{margin:10px 0 7px;font-size:17px}.feature-card p{margin:0;color:#8e99ab;font-size:12px;line-height:1.55}
 @media(max-width:1100px){.medtrak-showcase{grid-template-columns:1fr}.medtrak-info{justify-content:center}.medtrak-details{grid-template-columns:1fr}}
 @media(max-width:720px){.medtrak-showcase{padding:22px}.medtrak-info{grid-template-columns:1fr;text-align:center}.medtrak-icon{width:165px;margin:auto}.feature-chips,.app-actions{justify-content:center}.feature-grid{grid-template-columns:1fr}.medtrak-details{padding:0}}
+
+
+/* ==========================================
+   PRODUCTION PERFORMANCE PASS
+   ========================================== */
+
+/* Static atmospheric lighting replaces per-frame canvas gradients. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 14% 58%, rgba(0, 91, 215, .12), transparent 42%),
+    radial-gradient(circle at 86% 56%, rgba(135, 28, 255, .08), transparent 38%),
+    #02040a;
+  transform: translateZ(0);
+}
+
+/* Canvas only draws particles/trails now. */
+#mst-particle-canvas {
+  background: transparent !important;
+  contain: strict;
+  transform: translateZ(0);
+}
+
+/* Blur is attractive but expensive while scrolling; use stable translucent fills instead. */
+.topbar,
+.app-card,
+.feature-card,
+.mst-app-card,
+.apps-shell {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Slightly more opaque backgrounds preserve the same visual feel without live blur. */
+.topbar {
+  background: rgba(2, 6, 13, .94) !important;
+}
+
+.app-card,
+.medtrak-showcase {
+  background:
+    radial-gradient(circle at 16% 50%, rgba(13,108,255,.11), transparent 34%),
+    radial-gradient(circle at 80% 50%, rgba(150,43,255,.08), transparent 36%),
+    linear-gradient(120deg, rgba(7,16,35,.97), rgba(11,7,30,.95)) !important;
+}
+
+.feature-card {
+  background: linear-gradient(145deg, rgba(9,20,41,.94), rgba(7,9,22,.92)) !important;
+}
+
+/* Keep the heavy lower sections out of layout/paint until near the viewport. */
+.medtrak-details,
+.lower,
+.simple-section,
+.contact-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
+}
+
+/* Tell the browser what will animate. */
+.reveal {
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  will-change: auto;
+}
+
+/* Avoid large shadows on every frame during scroll. */
+.phone,
+.medtrak-icon,
+.app-card,
+.apps-shell {
+  box-shadow: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #mst-particle-canvas {
+    display: none !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

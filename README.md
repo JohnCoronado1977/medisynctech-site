@@ -12,3 +12,14 @@ MEDTRAK SHOWCASE UPDATE
 - Added a four-card MedTrak feature overview below the primary showcase.
 - Preserved the fast-scroll particle engine from the approved baseline.
 - App Store badge is intentionally marked Coming to the App Store until the live listing URL is supplied.
+
+
+PRODUCTION PERFORMANCE PASS
+- Particle canvas now renders at 1x DPR instead of Retina 2x.
+- Particle count reduced and trails simplified.
+- Animation capped around 45fps for lower CPU/GPU load.
+- Atmospheric gradients moved from JavaScript to CSS.
+- Expensive backdrop-filter effects removed from scrolling surfaces.
+- Large offscreen sections use content-visibility to reduce painting.
+- Heavy scrolling shadows removed.
+- prefers-reduced-motion is respected.
