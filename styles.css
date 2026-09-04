@@ -547,3 +547,154 @@ body::before{
     outline: none;
   }
 }
+
+
+/* ==========================================
+   UNIVERSAL NEXUS-STYLE HAMBURGER HEADER
+   Desktop + mobile: logo left, menu right.
+   ========================================== */
+.desktop-nav,
+.desktop-touch {
+  display: none !important;
+}
+
+.topbar.universal-menu-header,
+body > .topbar {
+  position: sticky !important;
+  top: 0 !important;
+  width: min(1500px, calc(100% - 24px)) !important;
+  max-width: 1500px !important;
+  min-height: 88px !important;
+  margin: 12px auto 0 !important;
+  padding: 12px 18px !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 28px !important;
+  background: rgba(5,6,10,.28) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(130%) !important;
+  backdrop-filter: blur(18px) saturate(130%) !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  overflow: visible !important;
+  z-index: 70 !important;
+}
+
+.topbar .brand-logo {
+  flex: 0 1 auto !important;
+  min-width: 0 !important;
+  width: auto !important;
+  justify-content: flex-start !important;
+  margin: 0 !important;
+}
+
+.topbar .brand-logo .mst-full-logo {
+  width: min(540px, 58vw) !important;
+  max-height: 72px !important;
+  height: auto !important;
+  object-position: left center !important;
+}
+
+.mobile-menu-button {
+  display: inline-flex !important;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  background: rgba(7,10,18,.22);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  cursor: pointer;
+  z-index: 74;
+}
+
+.mobile-menu-button span {
+  display: block;
+  width: 21px;
+  height: 2px;
+  border-radius: 99px;
+  background: #f6f8ff;
+  transition: transform .22s ease, opacity .18s ease;
+}
+
+.mobile-menu-button[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.mobile-menu-button[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.mobile-menu-button[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: flex !important;
+  position: fixed;
+  top: 112px;
+  right: max(18px, calc((100vw - 1500px) / 2 + 18px));
+  width: min(290px, calc(100vw - 28px));
+  padding: 10px;
+  border: 1px solid rgba(83,144,255,.30);
+  border-radius: 22px;
+  background:
+    linear-gradient(rgba(7,10,18,.42), rgba(7,10,18,.42)) padding-box,
+    linear-gradient(135deg, rgba(22,140,255,.64), rgba(124,77,255,.50)) border-box;
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  backdrop-filter: blur(22px) saturate(140%);
+  box-shadow: 0 18px 54px rgba(0,0,0,.28);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px) scale(.98);
+  transform-origin: top right;
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+  z-index: 73;
+  flex-direction: column;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.mobile-menu a {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 16px;
+  border-radius: 14px;
+  color: rgba(245,247,255,.92);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+.mobile-menu a:hover,
+.mobile-menu a:focus-visible {
+  color:#fff;
+  background:rgba(255,255,255,.07);
+  outline:none;
+}
+
+@media (max-width: 760px) {
+  .topbar.universal-menu-header,
+  body > .topbar {
+    width: 100% !important;
+    min-height: 72px !important;
+    margin: 0 !important;
+    padding: 8px 12px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+  .topbar .brand-logo .mst-full-logo {
+    width: min(300px, 70vw) !important;
+    max-height: 58px !important;
+  }
+  .mobile-menu {
+    top: 76px;
+    right: 12px;
+    width: min(280px, calc(100vw - 24px));
+  }
+}
