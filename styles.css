@@ -268,3 +268,86 @@ body::before{
 .topbar{min-height:112px!important}
 @media(max-width:1050px){.brand-logo{flex-basis:360px!important}.brand-logo img{width:min(350px,34vw)!important;max-height:76px!important}}
 @media(max-width:760px){.topbar{min-height:76px!important}.brand-logo{min-width:120px!important;flex-basis:155px!important}.brand-logo img{width:155px!important;max-height:52px!important}}
+\n\n/* ==========================================
+   MST HEADER LOCKUP — FINAL
+   mst-logo.png contains ONLY the MST mark.
+   Company name is live text so it stays crisp.
+   ========================================== */
+
+/* If you upload your licensed GC Bager Regular font to the site root,
+   name it gc-bager-regular.ttf and this rule will use it automatically. */
+@font-face {
+  font-family: "GC Bager";
+  src: url("gc-bager-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.topbar{
+  min-height:112px!important;
+  padding:14px 38px!important;
+}
+
+.brand-logo{
+  display:flex!important;
+  align-items:center!important;
+  gap:24px!important;
+  flex:0 1 650px!important;
+  min-width:430px!important;
+  overflow:visible!important;
+}
+
+.brand-logo .mst-mark{
+  display:block!important;
+  width:230px!important;
+  max-width:none!important;
+  max-height:82px!important;
+  height:auto!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  flex:0 0 auto!important;
+}
+
+.brand-wordmark{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  line-height:.88;
+  white-space:nowrap;
+  font-family:"GC Bager", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight:400;
+  letter-spacing:.025em;
+}
+
+.brand-medisync{
+  color:#168cff;
+  font-size:38px;
+}
+
+.brand-technologies{
+  color:#777b82;
+  font-size:27px;
+  margin-top:8px;
+  letter-spacing:.08em;
+}
+
+@media(max-width:1200px){
+  .brand-logo{gap:16px!important;flex-basis:500px!important;min-width:350px!important}
+  .brand-logo .mst-mark{width:175px!important;max-height:68px!important}
+  .brand-medisync{font-size:29px}
+  .brand-technologies{font-size:20px;margin-top:6px}
+  .topbar nav{gap:24px!important}
+}
+
+@media(max-width:900px){
+  .brand-wordmark{display:none}
+  .brand-logo{min-width:150px!important;flex-basis:190px!important}
+  .brand-logo .mst-mark{width:175px!important;max-height:64px!important}
+}
+
+@media(max-width:760px){
+  .topbar{min-height:76px!important;padding:10px 16px!important}
+  .brand-logo{min-width:92px!important;flex-basis:112px!important;gap:0!important}
+  .brand-logo .mst-mark{width:108px!important;max-height:46px!important}
+}
