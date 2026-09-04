@@ -351,3 +351,60 @@ body::before{
   .brand-logo{min-width:92px!important;flex-basis:112px!important;gap:0!important}
   .brand-logo .mst-mark{width:108px!important;max-height:46px!important}
 }
+
+
+/* ==========================================
+   FINAL FULL-IMAGE MST HEADER LOGO
+   The uploaded logo already includes the full wordmark.
+   ========================================== */
+.brand-logo {
+  display: flex !important;
+  align-items: center !important;
+  flex: 0 1 650px !important;
+  min-width: 300px !important;
+  text-decoration: none !important;
+}
+
+.brand-logo .mst-full-logo {
+  display: block !important;
+  width: min(620px, 42vw) !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 104px !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+}
+
+/* Disable the previous split text/mark header treatment. */
+.brand-wordmark,
+.brand-medisync,
+.brand-technologies,
+.mst-mark {
+  display: none !important;
+}
+
+@media (max-width: 980px) {
+  .brand-logo {
+    flex: 1 1 auto !important;
+    min-width: 240px !important;
+  }
+
+  .brand-logo .mst-full-logo {
+    width: min(470px, 48vw) !important;
+    max-height: 88px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .brand-logo {
+    min-width: 0 !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .brand-logo .mst-full-logo {
+    width: min(540px, 92vw) !important;
+    max-height: 94px !important;
+    object-position: center !important;
+  }
+}
