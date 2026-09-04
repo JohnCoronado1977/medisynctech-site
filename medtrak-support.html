@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official support page for MedTrak by MediSync Technologies.">
+  <title>MedTrak Support | MediSync Technologies</title>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #05060a;
+      --card: rgba(18, 20, 31, 0.82);
+      --text: #f5f7ff;
+      --muted: #a9afc3;
+      --blue: #168cff;
+      --purple: #7c4dff;
+      --border: rgba(255,255,255,.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 20% 0%,
+          rgba(22,140,255,.16), transparent 38%),
+        radial-gradient(circle at 85% 20%,
+          rgba(124,77,255,.14), transparent 38%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    main {
+      width: min(900px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 72px 0;
+    }
+
+    .brand {
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: .04em;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 8vw, 72px);
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 22px 0 42px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .card {
+      padding: 30px;
+      margin: 18px 0;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--card);
+      backdrop-filter: blur(18px);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 23px;
+    }
+
+    p, li {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    a {
+      color: #55aaff;
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .button {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 13px 20px;
+      border-radius: 12px;
+      color: white;
+      font-weight: 650;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+    }
+
+    .button:hover {
+      text-decoration: none;
+      opacity: .92;
+    }
+
+    footer {
+      margin-top: 44px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: #747b91;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="brand">MEDISYNC TECHNOLOGIES</div>
+
+    <h1><span class="gradient">MedTrak</span> Support</h1>
+
+    <p class="intro">
+      Need help with MedTrak? This page provides support information
+      for the MedTrak iPhone and Apple Watch app from MediSync Technologies.
+    </p>
+
+    <section class="card">
+      <h2>Getting Help</h2>
+      <p>
+        If you're experiencing an issue with MedTrak or have a question
+        about using the app, contact MediSync Technologies using the
+        support email below.
+      </p>
+
+      <a class="button"
+         href="mailto:suppor.medisynctech@gmail.com?subject=MedTrak%20Support">
+        Email MedTrak Support
+      </a>
+    </section>
+
+    <section class="card">
+      <h2>Before Contacting Support</h2>
+      <p>When reporting a problem, please include:</p>
+      <ul>
+        <li>Your iPhone model and iOS version</li>
+        <li>Your Apple Watch model and watchOS version, if applicable</li>
+        <li>The version of MedTrak you're using</li>
+        <li>A brief description of what happened</li>
+      </ul>
+      <p>
+        Please do not include passwords or unnecessary sensitive
+        medical information in your support message.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>About MedTrak</h2>
+      <p>
+        MedTrak helps users organize medications, track doses and
+        progress, manage medication supply information, scan supported
+        prescription labels, organize appointments and provider
+        information, create medication PDF reports, and access
+        medication information from Apple Watch.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Medical Information</h2>
+      <p>
+        MedTrak is an organizational and medication-tracking tool.
+        It does not provide medical advice, diagnosis, or treatment
+        and is not a substitute for advice from a qualified healthcare
+        professional.
+      </p>
+      <p>
+        Always verify medication and prescription information and
+        follow the instructions provided by your healthcare
+        professional and pharmacy.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Privacy</h2>
+      <p>
+        Learn how MedTrak handles information in the
+        <a href="medtrak-privacy.html">MedTrak Privacy Policy</a>.
+      </p>
+    </section>
+
+    <footer>
+      © 2026 MediSync Technologies. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
