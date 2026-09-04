@@ -1,0 +1,1 @@
+Add your transparent logo PNG to the repository root with this exact filename: mst-logo.png

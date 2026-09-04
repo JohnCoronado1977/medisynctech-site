@@ -229,3 +229,17 @@ button {
     pointer-events: none;
   }
 }
+
+
+/* ==========================================
+   MEDISYNC FINAL BRAND / SHARED PAGE THEME
+   ========================================== */
+:root{--site-bg:#05060a;--site-card:rgba(18,20,31,.82);--site-text:#f5f7ff;--site-muted:#a9afc3;--site-blue:#168cff;--site-purple:#7c4dff;--site-border:rgba(255,255,255,.10)}
+html,body{min-height:100%;background:#05060a!important;color:var(--site-text)}
+body::before{background:radial-gradient(circle at 20% 0%,rgba(22,140,255,.16),transparent 38%),radial-gradient(circle at 85% 20%,rgba(124,77,255,.14),transparent 38%),#05060a!important}
+.hero{background:transparent!important}
+.brand-logo{display:flex;align-items:center;flex:0 1 360px;min-width:180px}
+.brand-logo img{display:block;width:min(330px,28vw);max-height:58px;height:auto;object-fit:contain;object-position:left center}
+.mst-footer-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:18px}.mst-footer-links a{color:#a9afc3}.mst-footer-links a:hover{color:#fff}
+.legal-page{width:min(900px,calc(100% - 40px));margin:0 auto;padding:72px 0}.legal-page .legal-brand{color:var(--site-blue);font-weight:700;letter-spacing:.04em;margin-bottom:32px}.legal-page h1{margin:0;font-size:clamp(42px,8vw,72px);line-height:1;letter-spacing:-.04em}.legal-gradient{background:linear-gradient(90deg,var(--site-blue),var(--site-purple));-webkit-background-clip:text;background-clip:text;color:transparent}.legal-effective{margin-top:18px;color:#747b91}.legal-intro{max-width:760px;margin:22px 0 42px;color:var(--site-muted);font-size:18px;line-height:1.65}.legal-card{padding:30px;margin:18px 0;border:1px solid var(--site-border);border-radius:22px;background:var(--site-card)}.legal-card h2{margin-top:0;font-size:23px}.legal-card p,.legal-card li{color:var(--site-muted);line-height:1.7}.legal-card a{color:#55aaff}.legal-card a:hover{text-decoration:underline}.legal-button{display:inline-block;margin-top:8px;padding:13px 20px;border-radius:12px;color:#fff!important;font-weight:650;background:linear-gradient(90deg,var(--site-blue),var(--site-purple))}.legal-button:hover{text-decoration:none!important;opacity:.92}.legal-footer{margin-top:44px;padding-top:24px;border-top:1px solid var(--site-border);color:#747b91;font-size:14px}
+@media(max-width:760px){.brand-logo{min-width:95px;flex-basis:125px}.brand-logo img{width:125px;max-height:42px}.legal-page{padding:48px 0}}
