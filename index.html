@@ -8,21 +8,12 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<canvas id="mst-particle-canvas" aria-hidden="true"></canvas>
 
-<header class="topbar universal-menu-header">
-  <a class="brand brand-logo" href="#home" aria-label="MediSync Technologies home">
-    <img src="mst-logo.png" alt="MediSync Technologies" class="mst-full-logo">
-  </a>
-    <button class="mobile-menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-    <a href="#home">Home</a>
-    <a href="#apps">Apps</a>
-    <a href="#about">About Us</a>
-    <a href="medtrak-support.html">Support</a>
-    <a href="medtrak-privacy.html">Privacy</a>
-  </nav>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="mst">MST</span><span><b>Medi<span>Sync</span></b><small>TECHNOLOGIES</small></span></a>
+  <nav><a class="active" href="#home">Home</a><a href="#apps">Apps</a><a href="#about">About Us</a><a href="#contact">Contact</a></nav>
+  <a class="outline" href="#contact">Get in Touch&nbsp;&nbsp;→</a>
 </header>
 
 <main>
@@ -55,83 +46,49 @@
 
       <div class="feature-chips" aria-label="MedTrak features">
         <span>Medication Reminders</span>
-        <span>Daily Adherence</span>
-        <span>Timeline</span>
-        <span>Appointments</span>
-        <span>Refill Tracking</span>
-        <span>PDF Reports</span>
+        <span>Adherence & Statistics</span>
+        <span>Prescription Scanning</span>
+        <span>Appointments & Providers</span>
+        <span>Refill & Supply Tracking</span>
+        <span>PDF Medication Reports</span>
+        <span>Apple Watch Companion</span>
       </div>
 
       <div class="app-actions">
         <a class="outline-button" href="#medtrak-details">Explore MedTrak <span>→</span></a>
-        <div class="store-badge pending-store">
-          <small>COMING TO THE</small>
+        <a class="store-badge live-store" href="https://apps.apple.com/us/app/id6804344201" target="_blank" rel="noopener" aria-label="Download MedTrak on the App Store">
+          <small>DOWNLOAD ON THE</small>
           <strong>App Store</strong>
-        </div>
+        </a>
       </div>
     </div>
   </div>
 
-  <div class="phone-grid medtrak-phones" aria-label="MedTrak interface previews">
-    <div class="phone phone-home">
-      <div class="phone-notch"></div>
-      <div class="phone-screen">
-        <div class="phone-header"><span>Good Morning</span><b>•••</b></div>
-        <div class="today-progress">
-          <div class="mini-ring"><strong>85%</strong></div>
-          <div><b>Today</b><small>Daily medication progress</small></div>
-        </div>
-        <div class="phone-section-title">TODAY'S TIMELINE</div>
-        <div class="timeline-med done">
-          <i></i><div><b>Gabapentin</b><small>300 mg · Morning</small></div><em>Taken</em>
-        </div>
-        <div class="timeline-med done">
-          <i></i><div><b>Lisinopril</b><small>10 mg · 12:00 PM</small></div><em>Taken</em>
-        </div>
-        <div class="timeline-med upcoming">
-          <i></i><div><b>Atorvastatin</b><small>20 mg · 8:00 PM</small></div><em>Upcoming</em>
-        </div>
-      </div>
-    </div>
-
-    <div class="phone phone-timeline">
-      <div class="phone-notch"></div>
-      <div class="phone-screen">
-        <div class="phone-header"><span>Timeline</span><b>⌕</b></div>
-        <div class="timeline-date">TODAY</div>
-        <div class="timeline-med done">
-          <i></i><div><b>Gabapentin</b><small>8:00 AM · 300 mg</small></div><em>Taken</em>
-        </div>
-        <div class="timeline-med done">
-          <i></i><div><b>Metformin</b><small>12:00 PM · 500 mg</small></div><em>Taken</em>
-        </div>
-        <div class="timeline-med upcoming">
-          <i></i><div><b>Atorvastatin</b><small>8:00 PM · 20 mg</small></div><em>Upcoming</em>
-        </div>
-        <div class="timeline-note">Doses remaining and prescription details stay visible at a glance.</div>
-      </div>
-    </div>
-
-    <div class="phone phone-report">
-      <div class="phone-notch"></div>
-      <div class="phone-screen">
-        <div class="phone-header"><span>Reports</span><b>↗</b></div>
-        <div class="report-card">
-          <span>ADHERENCE</span>
-          <strong>92%</strong>
-          <small>Overall completion this month</small>
-          <div class="report-progress"><i style="width:92%"></i></div>
-        </div>
-        <div class="phone-section-title">MEDICATION SUMMARY</div>
-        <div class="report-line"><span>Gabapentin</span><b>96%</b></div>
-        <div class="report-bar"><i style="width:96%"></i></div>
-        <div class="report-line"><span>Metformin</span><b>91%</b></div>
-        <div class="report-bar"><i style="width:91%"></i></div>
-        <div class="report-line"><span>Atorvastatin</span><b>88%</b></div>
-        <div class="report-bar purple-bar"><i style="width:88%"></i></div>
-      </div>
-    </div>
+  <div class="medtrak-release-strip">
+    <span class="release-dot"></span> Available now on the App Store for iPhone with Apple Watch companion
   </div>
+
+  <div class="medtrak-gallery" aria-label="MedTrak App Store screenshots">
+    <figure><img src="assets/medtrak/1.png" alt="MedTrak personal dashboard showing today's medication progress and appointments" loading="lazy"><figcaption>Your Personal Dashboard</figcaption></figure>
+    <figure><img src="assets/medtrak/2.png" alt="MedTrak personal chart showing medications, refill supply and dose actions" loading="lazy"><figcaption>Your Personal Chart</figcaption></figure>
+    <figure><img src="assets/medtrak/3.png" alt="MedTrak medication supply and refill tracking screen" loading="lazy"><figcaption>Refills Made Easier</figcaption></figure>
+    <figure><img src="assets/medtrak/4.png" alt="MedTrak progress dashboard with medication adherence statistics" loading="lazy"><figcaption>Understand Your Habits</figcaption></figure>
+    <figure><img src="assets/medtrak/5.png" alt="MedTrak appointment details with physician, map and directions" loading="lazy"><figcaption>Organized Care</figcaption></figure>
+    <figure><img src="assets/medtrak/6.png" alt="MedTrak statistics showing adherence, streaks and medication insights" loading="lazy"><figcaption>Your Personal Goals</figcaption></figure>
+  </div>
+
+  <section class="watch-showcase" aria-label="MedTrak for Apple Watch">
+    <div class="watch-copy">
+      <div class="section-kicker">MEDTRAK ON APPLE WATCH</div>
+      <h3>Your schedule. Right on your wrist.</h3>
+      <p>View scheduled medications and quickly Log, Skip or Undo a dose from Apple Watch. Dose activity stays synchronized with MedTrak on iPhone so your progress remains current.</p>
+      <div class="watch-points"><span>Log a dose</span><span>Skip when needed</span><span>Undo with one tap</span><span>iPhone synchronization</span></div>
+    </div>
+    <div class="watch-images">
+      <img src="assets/medtrak/w1.png" alt="MedTrak Apple Watch screen with Log and Skip controls" loading="lazy">
+      <img src="assets/medtrak/w2.png" alt="MedTrak Apple Watch screen after logging a dose with Undo control" loading="lazy">
+    </div>
+  </section>
 </article>
 
 <div class="medtrak-details reveal" id="medtrak-details">
@@ -139,8 +96,8 @@
     <div class="section-kicker">MEDTRAK AT A GLANCE</div>
     <h3>Built to keep the important details close.</h3>
     <p>
-      From the next scheduled dose to a physician phone number or medication report,
-      MedTrak is designed so the information users need is never buried several screens away.
+      MedTrak brings medication schedules, dose history, refill supply, appointments, providers,
+      prescription scanning, statistics and medication reports together in one focused experience.
     </p>
   </div>
 
@@ -149,13 +106,15 @@
     <div class="feature-card"><b>02</b><h4>Know your supply</h4><p>Quantity, usage and doses remaining help make low-supply situations visible before they become urgent.</p></div>
     <div class="feature-card"><b>03</b><h4>Keep care connected</h4><p>Appointments, physicians, pharmacies and prescribed medications can stay linked together.</p></div>
     <div class="feature-card"><b>04</b><h4>Share a clear report</h4><p>Generate a clean medication summary for appointments, printing or sharing when needed.</p></div>
+    <div class="feature-card"><b>05</b><h4>Scan supported prescriptions</h4><p>Use the camera to scan supported flat prescription labels, then review recognized information before saving.</p></div>
+    <div class="feature-card"><b>06</b><h4>See your progress</h4><p>Review adherence, streaks, dose history and medication insights over time.</p></div>
   </div>
 </div>
 </section>
 
 <section id="about" class="lower reveal"><span>ABOUT US</span><h2>Technology designed around real life.</h2><p>We create focused, thoughtfully designed digital experiences that make everyday tasks clearer, easier, and more useful.</p></section>
-<section id="contact" class="lower contact reveal"><span>CONTACT</span><h2>Let's build something useful.</h2><a class="primary" href="medtrak-support.html">Get in Touch →</a></section>
+<section id="contact" class="lower contact reveal"><span>CONTACT</span><h2>Let's build something useful.</h2><a class="primary" href="mailto:hello@medisynctech.com">Get in Touch →</a></section>
 </main>
-<footer>© <span id="year"></span> MediSync Technologies. All rights reserved.<div class="mst-footer-links"><a href="medtrak-support.html">MedTrak Support</a><a href="medtrak-privacy.html">Privacy Policy</a></div></footer>
+<footer>© <span id="year"></span> MediSync Technologies. All rights reserved.</footer>
 <script src="script.js"></script>
 </body></html>
