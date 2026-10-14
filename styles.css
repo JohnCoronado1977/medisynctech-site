@@ -320,3 +320,7 @@ button {
   .medtrak-gallery figure{flex-basis:82vw}
   .watch-images{grid-template-columns:1fr !important}
 }
+
+/* MediSync Technologies: new transparent MT emblem */
+.topbar .brand .brand-logo{display:block;width:62px;height:62px;object-fit:contain;flex:0 0 62px}
+@media(max-width:760px){.topbar .brand .brand-logo{width:46px;height:46px;flex-basis:46px}}
